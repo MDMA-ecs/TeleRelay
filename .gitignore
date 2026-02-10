@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+.env
+.env.*
+pip-wheel-metadata/
+
+# Runtime secrets / local state
+config.json
+*.session
+*.session-journal
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db

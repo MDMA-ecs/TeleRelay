@@ -1,0 +1,64 @@
+{
+  "telegram": {
+    "api_id": 123456,
+    "api_hash": "PUT_YOUR_TELEGRAM_API_HASH_HERE",
+    "session_name": "mdma"
+  },
+  "sources": [
+    "@source_channel_1",
+    "@source_channel_2"
+  ],
+  "target_channel": "@your_target_channel",
+  "post_interval_sec": 2,
+  "rename_text": "MDMA",
+  "filters": {
+    "enabled_protocols": [
+      "vless",
+      "vmess",
+      "trojan",
+      "ss"
+    ],
+    "retries": 1,
+    "test_timeout_sec": 8,
+    "good_ms": 300,
+    "ok_ms": 900,
+    "dedupe_window_hours": 24,
+    "stability_tries": 3,
+    "stability_delay_ms": 250,
+    "worker_count": 1,
+    "max_queue": 1000,
+    "cb_fail_threshold": 30,
+    "cb_cooldown_sec": 60,
+    "gold_ping_ms": 150,
+    "gold_need_ok": 3
+  },
+  "xray": {
+    "binary_path": "xray"
+  },
+  "curl": {
+    "binary_path": "curl"
+  },
+  "caption": {
+    "fixed": "\n\n—\n⚠️MDMA",
+    "medium_template": "{flag} {country} | {latency_ms}ms | {proto}"
+  },
+  "geoip": {
+    "provider": "ip-api",
+    "timeout_sec": 6
+  },
+  "logging": {
+    "level": "INFO"
+  },
+  "db_path": "bot.db",
+  "panel": {
+    "username": "admin",
+    "password": "change-me"
+  },
+  "switches": {
+    "enable_testing": true,
+    "enable_ip_check": true,
+    "enable_latency": true,
+    "enable_geoip": true,
+    "enable_send": true
+  }
+}
